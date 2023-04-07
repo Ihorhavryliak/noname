@@ -34,7 +34,6 @@ export const TableUsers = () => {
     }
   };
 
- 
   return (
     <Wrapper title={"Edit users"}>
       <>
@@ -55,7 +54,7 @@ export const TableUsers = () => {
             {usersData.length > 0 &&
               usersData.map((m, i) => {
                 return (
-                  <tr>
+                  <tr key={m.id}>
                     <td>{i + 1}</td>
                     <td>{m.data.firstName}</td>
                     <td>{m.data.lastName}</td>
@@ -63,7 +62,11 @@ export const TableUsers = () => {
                     <td>{m.data.phone}</td>
                     <td>
                       <Form.Select
-                        defaultValue={m.data.role}
+                        defaultValue={
+                          m.data && m.data.role && m.data.role.length > 0
+                            ? m.data.role[0]
+                            : "drive"
+                        }
                         onChange={(e) => setRole(e.target.value)}
                       >
                         <option value="driver">Driver</option>

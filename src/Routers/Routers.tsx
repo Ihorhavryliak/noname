@@ -16,9 +16,8 @@ const Routers = () => {
           element={<PrivateRoute element={<TripCreate />} />}
         />
         <Route path="trips" element={<PrivateRoute element={<Trip />} />} />
-
         <Route path="login" element={<Login />} />
-        <Route path="sigh-up" element={<Registration />} />
+        <Route path="sign-up" element={<Registration />} />
       </Route>
     </Routes>
   );

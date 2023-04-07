@@ -2,20 +2,21 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
-import { FacebookAuthProvider, GoogleAuthProvider, getAuth } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import {
+  FacebookAuthProvider,
+  GoogleAuthProvider,
+  getAuth,
+} from "firebase/auth";
 
-// Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyD0rDOiMvivqGX-Eiehkj_quRgCbPOuh40",
-  authDomain: "noname-a8b8e.firebaseapp.com",
-  projectId: "noname-a8b8e",
-  storageBucket: "noname-a8b8e.appspot.com",
-  messagingSenderId: "1039231032241",
-  appId: "1:1039231032241:web:7fb15a72892216e7b7bb90",
-  measurementId: "G-QEDNNYHPN0",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_SENDER_ID,
+  appId: process.env.REACT_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
@@ -26,4 +27,4 @@ export const auth = getAuth(app);
 export const db = getFirestore();
 
 export const providerGoogle = new GoogleAuthProvider();
-export const providerFacebook= new FacebookAuthProvider();
+export const providerFacebook = new FacebookAuthProvider();

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Alert } from "react-bootstrap";
 
-type NotificationType = {
+export  type NotificationType = {
   isSuccess: null | boolean;
   setIsSuccess: (val: null | boolean) => void;
 };

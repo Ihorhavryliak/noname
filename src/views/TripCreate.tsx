@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import { User, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../lib/firebase-config";
 import Notification from "../Components/Notification/Notification";
+import ButtonBack from "../Components/Button/ButtonBack";
 
 export const TripCreate = () => {
   const navigate = useNavigate();
@@ -63,9 +64,7 @@ export const TripCreate = () => {
   return (
     <Wrapper title={"Create trip"}>
       <div>
-        <Button variant="light" onClick={() => navigate("/")}>
-          Back
-        </Button>
+        <ButtonBack />
         <Notification isSuccess={isSuccess} setIsSuccess={setIsSuccess} />
         <div className="mt-3">
           <Form onSubmit={(e) => createTrip(e)}>
