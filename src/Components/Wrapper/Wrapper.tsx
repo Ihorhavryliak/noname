@@ -43,10 +43,10 @@ const Wrapper = (props: WrapperType) => {
       <Col xl={2} xxl={2} className="bg-dark mvh-100 ">
         <div className="p-4 text-light text-center">Logo</div>
 
-        <div className="mt-2">
+        <div className="mt-5">
           <NavLink to="/">Edit users</NavLink>
         </div>
-        <div className="mt-5">
+        <div className="mt-2">
           <NavLink to="/trips">Trips</NavLink>
         </div>
       </Col>
